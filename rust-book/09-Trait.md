@@ -1,5 +1,3 @@
-[toc]
-
 # Trait
 
 ## 定义
@@ -136,4 +134,3 @@ impl<T: Display + PartialOrd> Pair<T> {
 只有那些为 T 类型实现了 PartialOrd trait （来允许比较） 和 Display trait （来启用打印）的 Pair<T> 才会实现 cmp_display 方法.
 
 注意对比 `impl Pair<i32>{}` 他表示为 泛型是 i32 的 Pair 实现方法.另一者是泛型需要实现 trait bound.
-

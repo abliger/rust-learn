@@ -1,6 +1,4 @@
-[toc]
-
-# 高级trait 和 高级类型
+# 高级 trait 和 高级类型
 
 ## 高级类型
 
@@ -75,7 +73,7 @@ fn generic<T: ?Sized>(t: &T) {
 
 ### newtype
 
-如果想要在 Vec<T> 上实现 Display.而 rust 不允许我们实现外部 crate 类型.我们可以构建新结构,在新结构上实现 Display并使用 Vec<T>.
+如果想要在 Vec<T> 上实现 Display.而 rust 不允许我们实现外部 crate 类型.我们可以构建新结构,在新结构上实现 Display 并使用 Vec<T>.
 
 ```rust
 use std::fmt;
@@ -94,7 +92,7 @@ fn main() {
 }
 ```
 
-此方法的缺点是，因为 Wrapper 是一个新类型，它没有定义于其值之上的方法；必须直接在 Wrapper 上实现 Vec<T> 的所有方法，这样就可以代理到self.0 上 —— 这就允许我们完全像 Vec<T> 那样对待 Wrapper.
+此方法的缺点是，因为 Wrapper 是一个新类型，它没有定义于其值之上的方法；必须直接在 Wrapper 上实现 Vec<T> 的所有方法，这样就可以代理到 self.0 上 —— 这就允许我们完全像 Vec<T> 那样对待 Wrapper.
 
 如果希望新类型拥有其内部类型的每一个方法，为封装类型实现 Deref trait 并返回其内部类型是一种解决方案.
 
@@ -132,7 +130,7 @@ pub trait Iterator<T> {
 }
 ```
 
-定义成泛型我们可以根据泛型不同定义多个trait,再通过类型注解调用.使用关联类型指定定义一次.
+定义成泛型我们可以根据泛型不同定义多个 trait,再通过类型注解调用.使用关联类型指定定义一次.
 
 ### 默认泛型参数类型
 
