@@ -288,7 +288,7 @@ use std::fmt;
 
 trait OutlinePrint: fmt::Display {
     fn outline_print(&self) {
-        let output = self.to_string();
+        let output = self.to_string();// 在此处使用 display 的 to_string 方法
         let len = output.len();
         println!("{}", "*".repeat(len + 4));
         println!("*{}*", " ".repeat(len + 2));
