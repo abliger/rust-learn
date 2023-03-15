@@ -8,3 +8,4 @@
 **/target/*
 *.lock
 /project/doc/*
+.idea
