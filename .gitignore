@@ -9,3 +9,4 @@
 *.lock
 /project/doc/*
 .idea
+package/crate/**
